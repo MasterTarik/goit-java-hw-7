@@ -1,6 +1,14 @@
-public class Oval extends GraphicsEditor {
+import interfacec.Print;
+
+public class Oval extends Shape implements Print {
+
     @Override
-    public void getName() {
-        System.out.println("Oval");
+    public final String getName() {
+        return "Oval";
+    }
+
+    @Override
+    public void printShapeName() {
+        System.out.printf("This shape name will be : %s%n", getName());
     }
 }

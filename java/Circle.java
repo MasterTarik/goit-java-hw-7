@@ -1,15 +1,14 @@
-import interfacec.Area;
+import interfacec.Print;
 
-public class Circle extends GraphicsEditor implements Area {
+public class Circle extends Shape implements Print {
 
     @Override
-    public void getName() {
-        System.out.println("Circle");
+    public final String getName() {
+        return "Circle";
     }
 
     @Override
-    public double area(int radius) {
-        return Math.PI * Math.pow(radius, 2);
+    public void printShapeName() {
+        System.out.printf("This shape name will be : %s%n", getName());
     }
-
 }

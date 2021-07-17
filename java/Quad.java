@@ -1,7 +1,7 @@
-public class Quad extends GraphicsEditor {
+public class Quad extends Shape {
 
     @Override
-    public void getName() {
-        System.out.println("Quad");
+    public String getName() {
+        return "Quad";
     }
 }
