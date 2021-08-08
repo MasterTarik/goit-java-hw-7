@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Triangle {
-    
+public interface Triangle extends ShapeOperation{
+    double perimeter();
 }

@@ -1,11 +1,10 @@
 import interfaces.Circle;
-import interfaces.ShapeOperation;
 
-public class Oval extends Shape implements Circle, ShapeOperation {
+public class Oval extends Shape implements Circle {
 
-    private double radiusLow;
-    private double radiusHeight;
-    public final String name = "Oval";
+    private final double radiusLow;
+    private final double radiusHeight;
+    public static final String name = "Oval";
 
     public Oval(double radiusLow, double radiusHeight) {
         this.radiusLow = radiusLow;

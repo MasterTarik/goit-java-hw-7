@@ -1,8 +1,7 @@
-import interfaces.ShapeOperation;
 import interfaces.Square;
 
-public class Quad extends Shape implements Square, ShapeOperation {
-    private static double side;
+public class Quad extends Shape implements Square {
+    private final double side;
 
     public Quad(double side) {
         this.side = side;

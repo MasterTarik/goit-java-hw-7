@@ -1,9 +1,8 @@
-import interfaces.ShapeOperation;
 
-public class Circle extends Shape implements interfaces.Circle, ShapeOperation {
+public class Circle extends Shape implements interfaces.Circle {
 
     public static final String name = "Circle";
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         this.radius = radius;
