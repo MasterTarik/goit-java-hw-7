@@ -1,14 +1,34 @@
-import interfacec.Print;
+import interfaces.Circle;
+import interfaces.ShapeOperation;
 
-public class Oval extends Shape implements Print {
+public class Oval extends Shape implements Circle, ShapeOperation {
 
-    @Override
-    public final String getName() {
-        return "Oval";
+    private double radiusLow;
+    private double radiusHeight;
+    public final String name = "Oval";
+
+    public Oval(double radiusLow, double radiusHeight) {
+        this.radiusLow = radiusLow;
+        this.radiusHeight = radiusHeight;
     }
 
     @Override
-    public void printShapeName() {
-        System.out.printf("This shape name will be : %s%n", getName());
+    public String getShapeName() {
+        return name;
+    }
+
+    @Override
+    public double length() {
+        return Pi * (radiusLow + radiusHeight);
+    }
+
+    @Override
+    public double area() {
+        return Pi * radiusLow * radiusHeight;
+    }
+
+    @Override
+    public double diameter() {
+        return 0;
     }
 }
