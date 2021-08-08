@@ -24,7 +24,7 @@ public class Rhombus extends Shape implements Square, ShapeOperation {
     }
 
     @Override
-    public double diameter() {
+    public double diagonal() {
         return 0;
     }
 

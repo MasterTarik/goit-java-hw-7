@@ -20,7 +20,7 @@ public class Circle extends Shape implements interfaces.Circle, ShapeOperation {
     }
 
     @Override
-    public double diameter() {
+    public double diagonal() {
         return 2 * radius;
     }
 

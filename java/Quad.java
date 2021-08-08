@@ -2,9 +2,9 @@ import interfaces.ShapeOperation;
 import interfaces.Square;
 
 public class Quad extends Shape implements Square, ShapeOperation {
-    private int side;
+    private static double side;
 
-    public Quad(int side) {
+    public Quad(double side) {
         this.side = side;
     }
 
@@ -24,11 +24,11 @@ public class Quad extends Shape implements Square, ShapeOperation {
     }
 
     @Override
-    public double diameter() {
+    public double diagonal() {
         return Math.sqrt(2) * side;
     }
 
-    public int getSide() {
-        return side;
+    public double getSide() {
+        return this.side;
     }
 }

@@ -28,7 +28,7 @@ public class Oval extends Shape implements Circle, ShapeOperation {
     }
 
     @Override
-    public double diameter() {
+    public double diagonal() {
         return 0;
     }
 }

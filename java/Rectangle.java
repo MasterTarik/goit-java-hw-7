@@ -19,7 +19,7 @@ public class Rectangle extends Shape implements Square, ShapeOperation {
     }
 
     @Override
-    public double diameter() {
+    public double diagonal() {
         return Math.sqrt(Math.pow(aSide, 2) + Math.pow(bSide, 2));
     }
 

@@ -1,16 +1,15 @@
-import interfaces.Circle;
 import interfaces.ShapeOperation;
 import interfaces.Square;
 
 public class Triangle extends Shape implements Square, ShapeOperation {
     private final String name = "Triangle";
 
-    private double aSide, bSide, cSide;
+    private double a, b, c;
 
     public Triangle(double aSide, double bSide, double cSide) {
-        this.aSide = aSide;
-        this.bSide = bSide;
-        this.cSide = cSide;
+        this.a = aSide;
+        this.b = bSide;
+        this.c = cSide;
     }
 
     @Override
@@ -20,28 +19,24 @@ public class Triangle extends Shape implements Square, ShapeOperation {
 
     @Override
     public double area() {
-        return 0;
-    }
-
-    @Override
-    public double diameter() {
-        return 0;
+        double p = (a + b + c) / 2;
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
     @Override
     public double perimeter() {
-        return 0;
+        return  a + b + c;
     }
 
-    public double getaSide() {
-        return aSide;
+    public double getA() {
+        return a;
     }
 
-    public double getbSide() {
-        return bSide;
+    public double getB() {
+        return b;
     }
 
-    public double getcSide() {
-        return cSide;
+    public double getC() {
+        return c;
     }
 }
